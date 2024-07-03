@@ -1,1 +1,45 @@
 This is output file 
+
+# Performing Payload Encryption and Decryption Output :
+```json
+{
+    "path": {
+        "to": {
+            "encryptedFoo": {
+                "encryptedValue": "eyJraWQiOiI3NjFiMDAzYzFlYWRlM….Y+oPYKZEMTKyYcSIVEgtQw"
+            }
+        }
+    }
+}
+```
+Performing JWE Decryption 
+Output:
+```json
+{
+    "path": {
+        "to": {
+            "foo": {
+                "sensitiveField1": "sensitiveValue1",
+                "sensitiveField2": "sensitiveValue2"
+            }
+        }
+    }
+}
+```
+Encrypting Entire Payloads
+Output:
+```json
+{
+    "encryptedValue": "eyJraWQiOiI3NjFiMDAzYzFlYWRlM….Y+oPYKZEMTKyYcSIVEgtQw"
+}
+```
+Encrypting Payloads with Wildcards
+Output:
+```json
+{
+  "list": [
+    {"encryptedField": "eyJraWQiOiI3NjFiMDAzYzFlYWRlM….Y+oPYKZEMTKyYcSIVEgtQw"},
+    {"encryptedField": "eyJraWQiOiI3NjFiMDAzYzFlYWRlM….Y+asdvarvasdvfdvakmkmm"}
+  ]
+}
+```
